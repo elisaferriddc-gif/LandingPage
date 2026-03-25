@@ -1,6 +1,6 @@
 <script>
- console.log('Hello from SvelteKit!');   
- let count = $state(2);
+ let props = $props() 
+ let count = $state(props.initialCount)
  let doubled = $derived(count * 2);
 </script>
 
