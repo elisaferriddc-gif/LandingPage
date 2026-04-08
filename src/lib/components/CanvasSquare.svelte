@@ -1,4 +1,5 @@
 <script>
+    import { untrack } from 'svelte';
     let size = $state(50);
     let color = $state('#ff3e00');
 
@@ -6,7 +7,7 @@
     $effect(() => {
         const context = canvas.getContext('2d');    
         context.clearRect(0, 0, canvas.width, canvas.height);
-        context.fillStyle = color;
+        context.fillStyle = untrack(() => color);
         context.fillRect(0, 0, size, size);
     })
 
