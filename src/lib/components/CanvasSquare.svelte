@@ -1,10 +1,9 @@
 <script>
-    import { onMount } from 'svelte'
     let size = $state(50);
     let color = $state('#ff3e00');
 
     let canvas 
-    onMount(() => {
+    $effect(() => {
         const context = canvas.getContext('2d');    
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.fillStyle = color;
