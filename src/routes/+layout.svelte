@@ -17,4 +17,4 @@
 	:global(p){
 		color:blueviolet;
 	}
-</style>
+</style> 
