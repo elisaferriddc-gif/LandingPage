@@ -1,11 +1,12 @@
+<!--$ variabili reattive-->
 <script>
     import { untrack } from 'svelte';
     let size = $state(50);
-    let color = $state('#ff3e00');
+    let color = $state('#ff3e00'); 
 
     let canvas 
     $effect(() => {
-        const context = canvas.getContext('2d');    
+        const context = canvas.getContext('2d');   
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.fillStyle = untrack(() => color);
         context.fillRect(0, 0, size, size);
@@ -15,7 +16,7 @@
 
 <h3> Canvas Square </h3>
 <article>
-    <canvas bind:this={canvas} width="100" height="100"> </canvas>
+    <canvas bind:this={canvas} width="100" height="100"> </canvas> <!-- bind serve per creare un collegamento bidirezionale tra un html e un js-->
     <nav>
         <label>
             Size: <input type="range" bind:value={size}>
