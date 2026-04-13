@@ -16,7 +16,7 @@
 <ClicksCounter 
      bind:initialCount={count} 
      willIncrement={(count) => console.log('Count was:', count)} 
-     didIncrement={(count) => console.log('Count has become:', count)} /> //aggiunta dei callbacks
+     didIncrement={(count) => console.log('Count has become:', count)} /> <!--aggiunta dei callbacks-->
 
 {#if count > 10 && count <20}
     <p> count from parent is {count} </p>

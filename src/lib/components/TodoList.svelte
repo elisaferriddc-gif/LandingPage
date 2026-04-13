@@ -1,7 +1,7 @@
 <script>
     let todos = $state([
         { title: "<i>Assignment 1</i>", done: false },
-        { title: "<b>Assignment 2</b>", done: false },
+        { title: "<b>Assignment 2</b>", done: false }, 
         { title: "Assignment 3", done: false },
     ]);
 </script>
@@ -10,10 +10,11 @@
         <li>
         <label>
             <input type="checkbox" bind:checked={todo.done}>
-            {todo.title} {todo.done ? '✅' : '❌'}
+            {@html todo.title} {todo.done ? '✅' : '❌'}
             </label>
         </li>
         {/snippet}
+        
 <h3> My Todos</h3>
 
 <ul>
@@ -27,7 +28,7 @@
 </ul>
 
 <style>
-    label:global {
+    label :global {
         i{ color: green;}
         b {
             color:blue;
